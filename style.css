@@ -275,9 +275,9 @@ body {
 
 /* for small screen sm (640px) */
 
-@media (min-width: 640px) {
+@media (min-width: 414px) {
     .container {
-        max-width: 640px;
+        max-width: 414px;
     }
     .sm-text-xl {
         font-size: 3em;
