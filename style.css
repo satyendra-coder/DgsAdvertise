@@ -57,6 +57,12 @@ ul {
     color: var(--text-dark-up);
 }
 
+.sticker {
+    width: 150px;
+    /* Adjust size */
+    height: 150px;
+}
+
 .text-white {
     color: var(--text-white);
 }
