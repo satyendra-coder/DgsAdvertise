@@ -285,30 +285,71 @@ body {
 /* -------------  media query ---------------- */
 
 
-/* for small screen sm (640px) */
+/* Base Styles (Mobile-First Approach) */
 
-@media (min-width: 414px) {
+.container {
+    width: 100%;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+
+/* for extra small screens xs (<414px) */
+
+@media (max-width: 414px) {
+    .container {
+        max-width: 100%;
+    }
+    .xs-text-sm {
+        font-size: 1em;
+    }
+    .xs-px-5 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    #nav {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+    #nav .toggle-btn>button {
+        display: block;
+    }
+    .collapse ul {
+        flex-direction: column;
+    }
+}
+
+
+/* for small screens sm (414px - 640px) */
+
+@media (min-width: 414px) and (max-width: 640px) {
     .container {
         max-width: 414px;
     }
     .sm-text-xl {
-        font-size: 3em;
+        font-size: 1.5em;
     }
     .sm-px-10 {
         padding-left: 3.5rem;
         padding-right: 3.5rem;
     }
+    .grid-item {
+        width: 100%;
+    }
+    .collapse ul {
+        gap: 1rem;
+    }
 }
 
 
-/* for medium screen md (768px) */
+/* for medium screens md (640px - 1024px) */
 
-@media (min-width: 768px) {
+@media (min-width: 640px) and (max-width: 1024px) {
     .container {
         max-width: 768px;
     }
     #site-main .recent-work-area .grid-item {
-        width: 40% !important;
+        width: 48%;
     }
     .md-text-left {
         text-align: left;
@@ -317,72 +358,89 @@ body {
         margin: initial;
     }
     .md-cols-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+    #nav {
+        padding: 1.5rem;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
 
-/* for large screen lg (1024px) */
+/* for large screens lg (1024px - 1280px) */
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1280px) {
     .container {
         max-width: 1024px;
     }
     .container-fluid {
         padding: 0 3rem;
     }
-    #nav .toggle-btn>button {
-        display: none;
-    }
     #nav {
-        padding-left: 6rem !important;
-        padding-right: 6rem !important;
-        flex-direction: row !important;
-    }
-    .collapse {
-        max-height: 50vh;
-        overflow-y: initial;
-        transition: all 0.9s ease;
+        padding-left: 4rem;
+        padding-right: 4rem;
     }
     .collapse ul {
-        flex-direction: row !important;
+        flex-direction: row;
         text-align: left;
-    }
-    .active {
-        max-height: 100% !important;
-    }
-    .collapse {
-        max-height: initial !important;
+        gap: 2rem;
     }
     .lg-cols-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     .lg-cols-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     .lg-cols-4 {
-        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-    }
-    .item-three {
-        grid-area: 3 / 4 / 8 / 14;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
     #site-main .recent-work-area .grid-item {
-        width: 28% !important;
+        width: 30%;
     }
 }
 
 
-/* for extra-large screen xl (1280px) */
+/* for extra-large screens xl (1280px - 1440px) */
 
-@media (min-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1440px) {
     .container {
         max-width: 1280px;
     }
     #nav {
         background: transparent !important;
+        padding: 2rem 6rem;
     }
     #nav .flex-initial ul button {
         display: inline-block !important;
+    }
+    .item-three {
+        grid-area: 3 / 4 / 8 / 14;
+    }
+}
+
+
+/* for ultra-wide screens xxl (>1440px) */
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+    }
+    #nav {
+        padding: 2rem 8rem;
+    }
+    .grid-item {
+        width: 25%;
+    }
+    .xxl-cols-4 {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 2rem;
     }
 }
 
