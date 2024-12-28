@@ -23,22 +23,28 @@
                     <div class="uf-cf-03-main bg-white py-5 px-lg-5 px-md-4 px-3 mx-auto rounded-4">
                         <h2 class="text-uppercase fw-bold">Contact Us</h2>
                         <p>Or reach out manually to <a href="mailto:uifresh.net@gmail.com" class="text-decoration-none uf-ct-03-text-primary">uifresh.net@gmail.com</a></p>
-                        <form>
+                        <form action="https://api.web3forms.com/submit" method="POST">
+
+                            <input type="hidden" name="access_key" value="d3acdd81-06c9-4a1c-b42d-6b8587344dfc">
+
                             <div class="input-group mb-3">
                                 <i class="fa-regular fa-user input-group-text uf-ct-03-input-group-text lh-lg"></i>
-                                <input type="text" class="form-control" placeholder="Your name" id="uf-iname">
+                                <input type="text" class="form-control" placeholder="Your name" id="uf-iname" name="name" required>
                             </div>
                             <div class="input-group mb-3">
                                 <i class="fa-regular fa-at input-group-text uf-ct-03-input-group-text lh-lg"></i>
-                                <input type="email" class="form-control" placeholder="Email address" id="uf-imail">
+                                <input type="email" class="form-control" placeholder="Email address" id="uf-imail" name="email" required>
                             </div>
                             <div class="input-group mb-3">
                                 <i class="fa-regular fa-pen-to-square input-group-text uf-ct-03-input-group-text lh-lg"></i>
-                                <textarea class="form-control" placeholder="Your message" id="uf-itextarea" rows="3"></textarea>
+                                <textarea class="form-control" placeholder="Your message" id="uf-itextarea" rows="3" name="message" required></textarea>
                             </div>
+
                             <button type="submit" class="btn btn-lg uf-ct-03-btn-primary text-uppercase w-100">
-                                Send Message</button>
+                                Send Message
+                            </button>
                         </form>
+
                     </div>
                 </div>
             </div>
