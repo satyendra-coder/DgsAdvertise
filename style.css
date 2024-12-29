@@ -342,109 +342,6 @@ body {
 }
 
 
-/* for medium screens md (640px - 1024px) */
-
-@media (min-width: 640px) and (max-width: 1024px) {
-    .container {
-        max-width: 768px;
-    }
-    #site-main .recent-work-area .grid-item {
-        width: 48%;
-    }
-    .md-text-left {
-        text-align: left;
-    }
-    .md-mx-initial {
-        margin: initial;
-    }
-    .md-cols-2 {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1.5rem;
-    }
-    #nav {
-        padding: 1.5rem;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-}
-
-
-/* for large screens lg (1024px - 1280px) */
-
-@media (min-width: 1024px) and (max-width: 1280px) {
-    .container {
-        max-width: 1024px;
-    }
-    .container-fluid {
-        padding: 0 3rem;
-    }
-    #nav {
-        padding-left: 4rem;
-        padding-right: 4rem;
-    }
-    .collapse ul {
-        flex-direction: row;
-        text-align: left;
-        gap: 2rem;
-    }
-    .lg-cols-2 {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-    .lg-cols-3 {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-    .lg-cols-4 {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-    #site-main .recent-work-area .grid-item {
-        width: 30%;
-    }
-}
-
-
-/* for extra-large screens xl (1280px - 1440px) */
-
-@media (min-width: 1280px) and (max-width: 1440px) {
-    .container {
-        max-width: 1280px;
-    }
-    #nav {
-        background: transparent !important;
-        padding: 2rem 6rem;
-    }
-    #nav .flex-initial ul button {
-        display: inline-block !important;
-    }
-    .item-three {
-        grid-area: 3 / 4 / 8 / 14;
-    }
-}
-
-
-/* for ultra-wide screens xxl (>1440px) */
-
-@media (min-width: 1440px) {
-    .container {
-        max-width: 1440px;
-    }
-    #nav {
-        padding: 2rem 8rem;
-    }
-    .grid-item {
-        width: 25%;
-    }
-    .xxl-cols-4 {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 2rem;
-    }
-}
-
-
 /* -------------x  media query  x---------------- */
 
 
@@ -515,7 +412,7 @@ body {
     position: relative;
     background: var(--bg-cover);
     background-repeat: no-repeat;
-    background-position-x: right;
+    background-position-x: center;
     z-index: -99;
 }
 
